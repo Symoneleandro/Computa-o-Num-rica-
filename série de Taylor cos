@@ -1,0 +1,10 @@
+function [c,e]=Tcos (x,n)
+    sinal=1
+    c=0;
+    for i=0:2:n
+        c= c+ sinal* (x^i/ factorial(i))
+        sinal= sinal*-1 
+    end
+    vr = cos(x)
+    e= (vr-c)/vr
+endfunction
